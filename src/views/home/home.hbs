@@ -1,0 +1,43 @@
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-kicker">🛰️ &nbsp; MISSION CONTROL ACTIVE</div>
+    <h1 class="hero-title">Explore the Future of Space Missions</h1>
+    <p class="hero-sub">Monitor interplanetary missions, track crew status, and command the next generation of space
+      exploration — all from one unified control center.</p>
+    <div class="hero-actions">
+      <a href="/mission/dashboard" class="btn-neon">🚀 Launch Dashboard</a>
+      <a href="/mission/create" class="btn-outline">+ Add Mission</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-planet"></div>
+    <div class="hero-ring">
+      <div class="hero-dot"></div>
+    </div>
+    <div class="hero-ring"></div>
+  </div>
+</section>
+
+<section id="featured" style="padding:0 60px 80px;">
+  <div class="section-title">Latest Missions</div>
+  {{#if hasMissions}}
+  <div class="mission-cards">
+    {{#each missions}}
+    <div class="glass-card mission-card">
+      <img class="mission-card-img" src="{{imageUrl}}" alt="{{name}}">
+      <div class="mission-card-body">
+        <div class="mission-card-title">{{name}}</div>
+        <p class="mission-card-sub">{{description}}</p>
+        <div class="mission-card-footer">
+          <span class="badge badge-active">{{destination}}</span>
+          <a href="/mission/{{id}}/details" class="details-btn">Details →</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+    {{else}}
+
+  <p class="no-post">There are no space missions yet!</p>
+  {{/if}}
+</section>

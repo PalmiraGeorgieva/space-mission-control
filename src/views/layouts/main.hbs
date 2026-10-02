@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/styles/styles.css" />
+  <title>Space Mission Control</title>
+</head>
+<body>
+  <!-- <div><div class="errorContainer"><p>Error message</p></div></div> -->
+  <div id="wrapper">
+    <header>
+      <div class="logo"><div class="logo-icon">🚀</div>SPACE CTRL</div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/mission/dashboard">Dashboard</a>
+      </nav>
+      <div class="nav-actions">
+        {{#if user}}
+        <div class="user">
+          <a href="/mission/create" class="btn-outline" style="font-size:11px;padding:8px 18px;">+ Add Mission</a>
+          <div class="user-chip"><div class="user-avatar">C</div><span class="user-name">Commander</span></div>
+          <a href="/auth/logout" style="color:var(--text-muted);font-size:13px;text-decoration:none;">Logout</a>
+        </div>
+        {{else}}
+        <div class="guest">
+          <a href="/auth/login" class="btn-outline" style="font-size:11px;padding:8px 18px;">Login</a>
+          <a href="/auth/register" class="btn-neon" style="font-size:11px;padding:8px 18px;">Register</a>
+        </div>
+        {{/if}}
+      </div>
+    </header>
+
+    <main class="home">
+        {{{body}}}
+
+    </main>
+
+    <footer>Space Mission Control &copy; SoftUni JS Back-End Exam 2026</footer>
+  </div>
+  <script src="/static/js/stars.js"></script>
+</body>
+</html>

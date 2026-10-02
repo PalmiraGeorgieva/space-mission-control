@@ -1,0 +1,26 @@
+<div class="auth-card glass-card" style="max-width:500px;">
+  <div class="auth-logo">
+    <div class="auth-logo-icon">👨‍🚀</div>
+    <h2 class="auth-title">Join the Mission</h2>
+    <p class="auth-sub">Create your Mission Control account</p>
+  </div>
+  <div class="neon-line"></div>
+  <form action="/auth/register" method="POST">
+    <div class="form-group">
+      <label class="form-label">Email Address</label>
+      <input type="text" class="form-input" name="email" placeholder="commander@spacectrl.com" />
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-input" name="password" placeholder="••••••••" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Confirm Password</label>
+        <input type="password" class="form-input" name="rePassword" placeholder="••••••••" />
+      </div>
+    </div>
+    <button type="submit" class="btn-auth">👨‍🚀 Create Account</button>
+  </form>
+  <p class="auth-footer">Already have access? <a href="/auth/login">Login here</a></p>
+</div>

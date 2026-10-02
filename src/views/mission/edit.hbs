@@ -1,0 +1,54 @@
+
+  <main class="edit-page">
+    <div class="glass-card form-card">
+      <h2 class="form-title">✏️ Edit Mission</h2>
+      <p class="form-sub">Update the mission parameters</p>
+      <div class="neon-line"></div>
+      <form action="/mission/{{id}}/edit" method="POST">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Mission Name</label>
+            <input type="text" class="form-input" name="name" value="{{name}}" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Mission Type</label>
+            <input type="text" class="form-input" name="type" value="{{type}}" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Destination</label>
+            <select class="form-input" name="destination">
+              <option>Moon</option>
+              <option selected>Mars</option>
+              <option>Earth Orbit</option>
+              <option>Jupiter</option>
+              <option>Deep Space</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Image URL</label>
+            <input type="text" class="form-input" name="imageUrl" value="{{imageUrl}}" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Crew Members</label>
+            <input type="number" class="form-input" name="crew" value="{{crew}}" min="0" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Launch Date</label>
+            <input type="text" class="form-input" name="launchDate" value="{{launchDate}}" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Duration</label>
+            <input type="text" class="form-input" name="duration" value="{{duration}}" />
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Mission Description</label>
+            <textarea class="form-input" name="description">{{description}}</textarea>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-neon">💾 Save Changes</button>
+          <a href="/mission/{{id}}/details" class="btn-outline">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </main>

@@ -1,0 +1,24 @@
+<main>
+  <div class="list-header">
+    <div class="section-title">All Missions</div>
+    <a href="/mission/create" class="btn-neon" style="font-size:11px;padding:9px 20px;">+ Add Mission</a>
+  </div>
+  {{#if hasMissions}}
+  <ul class="card-wrapper">
+    {{#each missions}}
+    <li class="glass-card card">
+      <img src="{{imageUrl}}" alt="{{name}}" />
+      <div class="card-body">
+        <div class="card-title">{{name}}</div>
+        <p><strong>Destination: </strong><span>{{destination}}</span></p>
+        <p><strong>Type: </strong><span>{{type}}</span></p>
+        <p><strong>Crew: </strong><span>{{crew}} members</span></p>
+        <a href="/mission/{{id}}/details" class="details-btn">Details →</a>
+      </div>
+    </li>
+    {{/each}}
+  </ul>
+  {{else}}
+   <div id="no-post"><h2>There are no space missions yet!</h2></div> 
+   {{/if}}
+</main>
